@@ -1,0 +1,24 @@
+{
+  "name": "zomato-backend-clone",
+  "version": "1.0.0",
+  "description": "Build a comprehensive food delivery and restaurant discovery platform that connects restaurants, customers, and delivery partners. The platform enables users to discover restaurants, browse menus, place orders, track deliveries, and provide feedback.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.0",
+    "validator": "^13.15.23",
+    "winston": "^3.18.3"
+  }
+}
