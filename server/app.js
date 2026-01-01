@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRouter from "./routes/auth.routes.js";
 import errorHandler from "./middlewares/error.middleware.js";
+import userRouter from "./routes/user.routes.js";
 
 // load environment variables from env file
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(cors());
 
 // application routes
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/user", userRouter);
 
 // error handler
 app.use(errorHandler);

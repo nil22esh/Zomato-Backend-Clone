@@ -15,6 +15,11 @@ export const findUserByEmail = async ({ email }) => {
   return user;
 };
 
+export const findUserByPhone = async ({ phone }) => {
+  const user = await User.findOne({ phone });
+  return user;
+};
+
 export const findUserByRefreshToken = async (refreshToken) => {
   const user = await User.findOne({ "refreshTokens.token": refreshToken });
   return user;

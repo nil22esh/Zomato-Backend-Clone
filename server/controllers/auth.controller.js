@@ -5,6 +5,7 @@ import {
   findUserByEmail,
   findUserByEmailOrPhone,
   findUserByEmailWithOTP,
+  findUserByPhone,
   findUserByRefreshToken,
   findUserByResetPasswordToken,
   findUserWithEmailVerificationToken,
@@ -103,6 +104,14 @@ export const loginUser = async (req, res, next) => {
     });
 
     await checkUserExists.save();
+
+    // Cookie for access token
+    res.cookie("accessToken", accessToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 2 * 60 * 60 * 1000,
+    });
 
     // Cookie for refresh token
     res.cookie("refreshToken", refreshToken, {
@@ -321,37 +330,53 @@ export const resetPassword = async (req, res, next) => {
 
 export const sendOTP = async (req, res, next) => {
   try {
-    const { email } = req.body;
-    // check req.body
-    if (!email) {
-      throw new BadRequestError("Email is required");
+    const { email, phone } = req.body;
+
+    // validation
+    if (!email && !phone) {
+      throw new BadRequestError("Email or phone is required");
     }
 
-    // check user
-    const user = await findUserByEmail({ email });
+    if (email && phone) {
+      throw new BadRequestError("Provide either email or phone, not both");
+    }
+
+    // find user
+    const user = email
+      ? await findUserByEmail({ email })
+      : await findUserByPhone({ phone });
+
     if (!user) {
-      throw new BadRequestError("user not found");
+      throw new BadRequestError("User not found");
     }
 
     // generate OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-    // hash otp
+    // hash OTP
     const hashedOTP = crypto.createHash("sha256").update(otp).digest("hex");
 
     user.otp = hashedOTP;
-    user.otpExpire = Date.now() + 5 * 60 * 1000;
+    user.otpExpire = Date.now() + 5 * 60 * 1000; // 5 min
 
     await user.save();
 
-    await sendEmail({
-      to: user.email,
-      subject: "OTP Verification",
-      html: sendOtpEmail({ otp }),
-    });
+    // send OTP
+    if (email) {
+      await sendEmail({
+        to: user.email,
+        subject: "OTP Verification",
+        html: sendOtpEmail({ otp }),
+      });
+    } else {
+      // TODO: integrate SMS provider (Twilio / MSG91)
+      console.log(`OTP for ${phone}: ${otp}`);
+    }
 
     return successResponse(res, {
-      message: "OTP sent successfully to your email",
+      message: email
+        ? "OTP sent successfully to your email"
+        : "OTP sent successfully to your phone",
     });
   } catch (error) {
     logger.error(error);
@@ -489,6 +514,47 @@ export const resendEmailVerification = async (req, res, next) => {
 
     return successResponse(res, {
       message: "Verification email sent successfully",
+    });
+  } catch (error) {
+    logger.error(error);
+    next(error);
+  }
+};
+
+export const verifyPhone = async (req, res, next) => {
+  try {
+    const { phone, otp } = req.body;
+
+    // validate request
+    if (!phone || !otp) {
+      throw new BadRequestError("Phone number and OTP are required");
+    }
+
+    // find user
+    const user = await findUserByPhone({ phone });
+    if (!user) {
+      throw new BadRequestError("User not found");
+    }
+
+    // check OTP expiry
+    if (!user.otp || user.otpExpire < Date.now()) {
+      throw new BadRequestError("OTP expired or not found");
+    }
+
+    // match OTP
+    if (Number(user.otp) !== Number(otp)) {
+      throw new BadRequestError("Invalid OTP");
+    }
+
+    // mark phone verified
+    user.isPhoneVerified = true;
+    user.otp = undefined;
+    user.otpExpire = undefined;
+
+    await user.save();
+
+    return successResponse(res, {
+      message: "Phone number verified successfully",
     });
   } catch (error) {
     logger.error(error);

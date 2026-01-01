@@ -10,6 +10,7 @@ import {
   sendOTP,
   verifyEmail,
   verifyOTP,
+  verifyPhone,
 } from "../controllers/auth.controller.js";
 
 const authRouter = express.Router();
@@ -32,6 +33,8 @@ authRouter.post("/send-OTP", sendOTP);
 authRouter.post("/verify-OTP", verifyOTP);
 // Verify email
 authRouter.get("/verify-email/:token", verifyEmail);
+// Verify phone
+authRouter.post("/verify-phone", verifyPhone);
 // Resend verification email
 authRouter.post("/resend-email-verification", resendEmailVerification);
 

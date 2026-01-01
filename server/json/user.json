@@ -1,0 +1,252 @@
+[
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e1",
+		"name": "Priya Sharma",
+		"email": "priya.sharma@example.com",
+		"phone": "9876543210",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isEmailVerified": true,
+		"isPhoneVerified": true,
+		"preferences": {
+			"dietary": [
+				"Vegetarian"
+			],
+			"cuisines": [
+				"North Indian",
+				"Italian"
+			],
+			"language": "hi"
+		},
+		"loyaltyPoints": 150,
+		"addresses": [
+			"60d0fe507f25b20015b6d9e2"
+		],
+		"defaultAddress": "60d0fe507f25b20015b6d9e2"
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e3",
+		"name": "Rohit Kumar",
+		"email": "rohit.kumar@example.com",
+		"phone": "9876543211",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isEmailVerified": false,
+		"preferences": {
+			"dietary": [],
+			"cuisines": [
+				"South Indian",
+				"Chinese"
+			]
+		},
+		"loyaltyPoints": 50
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e4",
+		"name": "Anjali Singh",
+		"email": "anjali.singh@restro.com",
+		"phone": "9876543212",
+		"password": "SecurePassword123",
+		"role": "restaurant_owner",
+		"isEmailVerified": true,
+		"preferences": {
+			"language": "en"
+		}
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e5",
+		"name": "Vijay Menon",
+		"email": "vijay.delivery@partner.com",
+		"phone": "9876543213",
+		"password": "SecurePassword123",
+		"role": "delivery_partner",
+		"isPhoneVerified": true,
+		"isActive": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e6",
+		"name": "Siddharth Jain (Admin)",
+		"email": "siddharth.admin@system.com",
+		"phone": "9876543214",
+		"password": "SecurePassword123",
+		"role": "admin",
+		"isEmailVerified": true,
+		"isPhoneVerified": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e7",
+		"name": "Deepa Rao",
+		"email": "deepa.rao@example.com",
+		"phone": "9876543215",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"preferences": {
+			"dietary": [
+				"Vegan"
+			],
+			"cuisines": [
+				"Thai",
+				"Vietnamese"
+			]
+		},
+		"loyaltyPoints": 300
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e8",
+		"name": "Karan Malhotra",
+		"email": "karan.malhotra@example.com",
+		"phone": "9876543216",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isActive": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9e9",
+		"name": "Pooja Desai",
+		"email": "pooja.desai@restro.com",
+		"phone": "9876543217",
+		"password": "SecurePassword123",
+		"role": "restaurant_owner",
+		"isActive": false
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9ea",
+		"name": "Rajesh Nambiar",
+		"email": "rajesh.delivery@partner.com",
+		"phone": "9876543218",
+		"password": "SecurePassword123",
+		"role": "delivery_partner",
+		"isPhoneVerified": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9eb",
+		"name": "Neha Verma",
+		"email": "neha.verma@example.com",
+		"phone": "9876543219",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"preferences": {
+			"language": "ta",
+			"notifications": {
+				"email": false,
+				"sms": true,
+				"push": true
+			}
+		},
+		"loyaltyPoints": 10
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9ec",
+		"name": "Amit Shah",
+		"email": "amit.shah@example.com",
+		"phone": "9876543220",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isEmailVerified": true,
+		"loyaltyPoints": 650
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9ed",
+		"name": "Shweta Joshi",
+		"email": "shweta.joshi@example.com",
+		"phone": "9876543221",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"preferences": {
+			"dietary": [
+				"Jain"
+			],
+			"cuisines": [
+				"Gujarati"
+			]
+		}
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9ee",
+		"name": "Gaurav Soni",
+		"email": "gaurav.soni@restro.com",
+		"phone": "9876543222",
+		"password": "SecurePassword123",
+		"role": "restaurant_owner",
+		"isEmailVerified": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9ef",
+		"name": "Deepesh Sharma",
+		"email": "deepesh.delivery@partner.com",
+		"phone": "9876543223",
+		"password": "SecurePassword123",
+		"role": "delivery_partner"
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f0",
+		"name": "Ritu Kapoor",
+		"email": "ritu.kapoor@example.com",
+		"phone": "9876543224",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"preferences": {
+			"cuisines": [
+				"Mexican",
+				"Continental"
+			]
+		},
+		"isPhoneVerified": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f1",
+		"name": "Vivek Patel",
+		"email": "vivek.patel@example.com",
+		"phone": "9876543225",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isActive": false,
+		"loyaltyPoints": 5
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f2",
+		"name": "Sonia Das",
+		"email": "sonia.das@example.com",
+		"phone": "9876543226",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"isEmailVerified": true,
+		"preferences": {
+			"dietary": [
+				"Non-Vegetarian"
+			],
+			"language": "bn"
+		}
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f3",
+		"name": "Harishankar Prasad",
+		"email": "harishankar.prasad@restro.com",
+		"phone": "9876543227",
+		"password": "SecurePassword123",
+		"role": "restaurant_owner"
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f4",
+		"name": "Zoya Khan",
+		"email": "zoya.delivery@partner.com",
+		"phone": "9876543228",
+		"password": "SecurePassword123",
+		"role": "delivery_partner",
+		"isActive": true
+	},
+	{
+		"_id": "60d0fe4f7f25b20015b6d9f5",
+		"name": "Aditya Murthy",
+		"email": "aditya.murthy@example.com",
+		"phone": "9876543229",
+		"password": "SecurePassword123",
+		"role": "customer",
+		"preferences": {
+			"cuisines": [
+				"Chinese",
+				"Japanese"
+			]
+		}
+	}
+]
