@@ -53,6 +53,12 @@ const userSchema = new mongoose.Schema(
         ref: "Address",
       },
     ],
+    restaurants: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Restaurant",
+      },
+    ],
     defaultAddress: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Address",

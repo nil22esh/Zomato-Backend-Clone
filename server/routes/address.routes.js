@@ -38,7 +38,7 @@ addressRouter.get(
 );
 // get nearby restaurants
 addressRouter.get(
-  "/get-nearby-restaurants",
+  "/get-nearby-restaurants/:addressId",
   authenticate,
   getNearbyRestaurants
 );

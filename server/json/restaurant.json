@@ -1,0 +1,480 @@
+[
+  {
+    "name": "The Spice Route",
+    "slug": "the-spice-route",
+    "owner": "659567c8e4b0a1a2b3c4d5e1",
+    "description": "Authentic North Indian cuisine with a royal touch.",
+    "cuisines": ["North Indian", "Mughlai"],
+    "images": {
+      "cover": "https://images.sample.com/spice-route-cover.jpg",
+      "logo": "https://images.sample.com/spice-route-logo.png",
+      "gallery": [
+        "https://images.sample.com/gallery1.jpg",
+        "https://images.sample.com/gallery2.jpg"
+      ]
+    },
+    "location": {
+      "address": {
+        "street": "12th Main Road, Indiranagar",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "coordinates": { "type": "Point", "coordinates": [77.6412, 12.9716] }
+    },
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@spiceroute.com",
+      "website": "https://spiceroute.com"
+    },
+    "timings": {
+      "monday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "tuesday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "wednesday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "thursday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "friday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "saturday": { "open": "11:00", "close": "23:30", "isClosed": false },
+      "sunday": { "open": "11:00", "close": "23:30", "isClosed": false }
+    },
+    "priceForTwo": 1200,
+    "minimumOrder": 200,
+    "deliveryFee": 40,
+    "packagingCharges": 20,
+    "deliveryTime": { "min": 30, "max": 45 },
+    "deliveryRadius": 8,
+    "rating": {
+      "average": 4.5,
+      "count": 150,
+      "distribution": {
+        "five": 100,
+        "four": 30,
+        "three": 10,
+        "two": 5,
+        "one": 5
+      }
+    },
+    "isOpen": true,
+    "isActive": true,
+    "isVerified": true,
+    "isPureVeg": false,
+    "features": ["air-conditioned", "parking", "reservations"],
+    "license": { "fssai": "12345678901234", "gst": "29AAAAA0000A1Z5" },
+    "stats": {
+      "totalOrders": 1200,
+      "totalRevenue": 1440000,
+      "totalViews": 5000
+    }
+  },
+  {
+    "name": "Spice Route Kitchen",
+    "slug": "spice-route-kitchen",
+    "owner": "66b9a0a1c1a1a1a1a1a1a101",
+    "description": "Authentic South Indian and Kerala cuisine with traditional spices.",
+    "cuisines": ["South Indian", "Kerala"],
+    "images": {
+      "cover": "https://img.com/spice-cover.jpg",
+      "logo": "https://img.com/spice-logo.jpg",
+      "gallery": ["https://img.com/spice1.jpg", "https://img.com/spice2.jpg"]
+    },
+    "location": {
+      "address": {
+        "street": "MG Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560001"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [77.5946, 12.9716]
+      }
+    },
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@spiceroute.in",
+      "website": "https://spiceroute.in"
+    },
+    "timings": {
+      "monday": { "open": "09:00", "close": "22:30", "isClosed": false },
+      "tuesday": { "open": "09:00", "close": "22:30", "isClosed": false },
+      "wednesday": { "open": "09:00", "close": "22:30", "isClosed": false },
+      "thursday": { "open": "09:00", "close": "22:30", "isClosed": false },
+      "friday": { "open": "09:00", "close": "23:00", "isClosed": false },
+      "saturday": { "open": "09:00", "close": "23:00", "isClosed": false },
+      "sunday": { "open": "09:00", "close": "22:00", "isClosed": false }
+    },
+    "priceForTwo": 600,
+    "minimumOrder": 200,
+    "deliveryFee": 40,
+    "packagingCharges": 20,
+    "deliveryRadius": 12,
+    "rating": {
+      "average": 4.5,
+      "count": 420,
+      "distribution": {
+        "five": 300,
+        "four": 90,
+        "three": 20,
+        "two": 7,
+        "one": 3
+      }
+    },
+    "isFeatured": true,
+    "isPureVeg": false,
+    "tags": ["family", "traditional"],
+    "features": ["wifi", "air-conditioned"],
+    "license": {
+      "fssai": "11223344556677",
+      "gst": "29ABCDE1234F1Z5"
+    },
+    "bankDetails": {
+      "accountNumber": "123456789012",
+      "ifsc": "HDFC0001234",
+      "bankName": "HDFC Bank",
+      "accountHolderName": "Spice Route Pvt Ltd"
+    },
+    "commission": 15,
+    "stats": {
+      "totalOrders": 5400,
+      "completedOrders": 5200,
+      "cancelledOrders": 200,
+      "totalRevenue": 3200000,
+      "averageOrderValue": 590,
+      "totalViews": 12000
+    },
+    "offers": []
+  },
+  {
+    "name": "Delhi Zaika",
+    "slug": "delhi-zaika",
+    "owner": "66b9a0a1c1a1a1a1a1a1a102",
+    "description": "North Indian Mughlai flavors straight from Old Delhi.",
+    "cuisines": ["North Indian", "Mughlai"],
+    "images": {
+      "cover": "https://img.com/zaika-cover.jpg",
+      "logo": "https://img.com/zaika-logo.jpg",
+      "gallery": []
+    },
+    "location": {
+      "address": {
+        "street": "Karol Bagh",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pincode": "110005"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [77.19, 28.6519]
+      }
+    },
+    "contact": {
+      "phone": "9123456789",
+      "email": "info@delhizaika.com"
+    },
+    "timings": {
+      "monday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "tuesday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "wednesday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "thursday": { "open": "11:00", "close": "23:00", "isClosed": false },
+      "friday": { "open": "11:00", "close": "23:30", "isClosed": false },
+      "saturday": { "open": "11:00", "close": "23:30", "isClosed": false },
+      "sunday": { "open": "11:00", "close": "23:00", "isClosed": false }
+    },
+    "priceForTwo": 800,
+    "deliveryFee": 50,
+    "rating": {
+      "average": 4.2,
+      "count": 310,
+      "distribution": {
+        "five": 180,
+        "four": 90,
+        "three": 30,
+        "two": 8,
+        "one": 2
+      }
+    },
+    "isFeatured": true,
+    "features": ["parking", "air-conditioned"],
+    "license": {
+      "fssai": "22334455667788"
+    },
+    "bankDetails": {
+      "accountNumber": "987654321098",
+      "ifsc": "ICIC0005678",
+      "bankName": "ICICI Bank",
+      "accountHolderName": "Delhi Zaika Foods"
+    },
+    "offers": []
+  },
+  {
+    "name": "Coastal Curry House",
+    "slug": "coastal-curry-house",
+    "owner": "66b9a0a1c1a1a1a1a1a1a103",
+    "description": "Seafood specialties inspired by Konkan coastal cuisine.",
+    "cuisines": ["Seafood", "Konkan"],
+    "images": {
+      "cover": "https://img.com/coastal-cover.jpg",
+      "logo": "https://img.com/coastal-logo.jpg",
+      "gallery": []
+    },
+    "location": {
+      "address": {
+        "street": "Bandra West",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400050"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [72.8296, 19.0596]
+      }
+    },
+    "contact": {
+      "phone": "9988776655",
+      "email": "info@coastalcurry.in"
+    },
+    "timings": {
+      "monday": { "open": "12:00", "close": "23:30", "isClosed": false },
+      "tuesday": { "open": "12:00", "close": "23:30", "isClosed": false },
+      "wednesday": { "open": "12:00", "close": "23:30", "isClosed": false },
+      "thursday": { "open": "12:00", "close": "23:30", "isClosed": false },
+      "friday": { "open": "12:00", "close": "00:00", "isClosed": false },
+      "saturday": { "open": "12:00", "close": "00:00", "isClosed": false },
+      "sunday": { "open": "12:00", "close": "23:00", "isClosed": false }
+    },
+    "priceForTwo": 1200,
+    "deliveryFee": 60,
+    "rating": {
+      "average": 4.6,
+      "count": 560,
+      "distribution": {
+        "five": 410,
+        "four": 110,
+        "three": 30,
+        "two": 7,
+        "one": 3
+      }
+    },
+    "isFeatured": true,
+    "features": ["bar", "wifi"],
+    "license": {
+      "fssai": "33445566778899"
+    },
+    "bankDetails": {
+      "accountNumber": "111122223333",
+      "ifsc": "SBIN0001234",
+      "bankName": "State Bank of India",
+      "accountHolderName": "Coastal Curry LLP"
+    },
+    "offers": []
+  },
+  {
+    "name": "Urban Tandoor",
+    "slug": "urban-tandoor",
+    "owner": "66b9a0a1c1a1a1a1a1a1a104",
+    "description": "Modern Indian tandoori grills and fusion dishes.",
+    "cuisines": ["North Indian", "Grill"],
+    "images": {
+      "cover": null,
+      "logo": null,
+      "gallery": []
+    },
+    "location": {
+      "address": {
+        "street": "Hinjewadi Phase 1",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pincode": "411057"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [73.7389, 18.5913]
+      }
+    },
+    "contact": {
+      "phone": "9871234567",
+      "email": "support@urbantandoor.com"
+    },
+    "timings": {
+      "monday": { "open": "11:30", "close": "23:00", "isClosed": false },
+      "tuesday": { "open": "11:30", "close": "23:00", "isClosed": false },
+      "wednesday": { "open": "11:30", "close": "23:00", "isClosed": false },
+      "thursday": { "open": "11:30", "close": "23:00", "isClosed": false },
+      "friday": { "open": "11:30", "close": "23:30", "isClosed": false },
+      "saturday": { "open": "11:30", "close": "23:30", "isClosed": false },
+      "sunday": { "open": "11:30", "close": "22:30", "isClosed": false }
+    },
+    "priceForTwo": 900,
+    "rating": {
+      "average": 4.1,
+      "count": 210,
+      "distribution": {
+        "five": 120,
+        "four": 60,
+        "three": 20,
+        "two": 7,
+        "one": 3
+      }
+    },
+    "features": ["parking", "air-conditioned"],
+    "license": {
+      "fssai": "44556677889900"
+    },
+    "offers": []
+  },
+  {
+    "name": "Nawabi Biryani House",
+    "slug": "nawabi-biryani-house",
+    "owner": "66b9a0a1c1a1a1a1a1a1a105",
+    "description": "Authentic Hyderabadi dum biryani.",
+    "cuisines": ["Biryani", "Hyderabadi"],
+    "location": {
+      "address": {
+        "street": "Banjara Hills",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pincode": "500034"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [78.4483, 17.4126]
+      }
+    },
+    "contact": {
+      "phone": "9012345678"
+    },
+    "timings": {
+      "monday": { "open": "12:00", "close": "23:30", "isClosed": false }
+    },
+    "priceForTwo": 700,
+    "rating": {
+      "average": 4.7,
+      "count": 1200,
+      "distribution": {
+        "five": 900,
+        "four": 200,
+        "three": 70,
+        "two": 20,
+        "one": 10
+      }
+    },
+    "isFeatured": true,
+    "license": {
+      "fssai": "55667788990011"
+    },
+    "offers": []
+  },
+  {
+    "name": "Rajwadi Rasoi",
+    "slug": "rajwadi-rasoi",
+    "owner": "66b9a0a1c1a1a1a1a1a1a106",
+    "description": "Royal Rajasthani vegetarian thalis.",
+    "cuisines": ["Rajasthani", "Vegetarian"],
+    "location": {
+      "address": {
+        "street": "MI Road",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "pincode": "302001"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [75.7873, 26.9124]
+      }
+    },
+    "contact": {
+      "phone": "8899776655"
+    },
+    "timings": {
+      "monday": { "open": "10:00", "close": "22:00", "isClosed": false }
+    },
+    "priceForTwo": 500,
+    "isPureVeg": true,
+    "license": {
+      "fssai": "66778899001122"
+    },
+    "offers": []
+  },
+  {
+    "name": "Oh! Calcutta",
+    "slug": "oh-calcutta",
+    "owner": "66b9a0a1c1a1a1a1a1a1a107",
+    "description": "Classic Bengali cuisine.",
+    "cuisines": ["Bengali"],
+    "location": {
+      "address": {
+        "street": "Park Street",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "pincode": "700016"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [88.3639, 22.5548]
+      }
+    },
+    "contact": {
+      "phone": "9988001122"
+    },
+    "priceForTwo": 650,
+    "license": {
+      "fssai": "77889900112233"
+    },
+    "offers": []
+  },
+  {
+    "name": "Malabar Spice",
+    "slug": "malabar-spice",
+    "owner": "66b9a0a1c1a1a1a1a1a1a108",
+    "description": "Traditional Malabar Muslim cuisine.",
+    "cuisines": ["Malabar", "Kerala"],
+    "location": {
+      "address": {
+        "street": "MG Road",
+        "city": "Kochi",
+        "state": "Kerala",
+        "pincode": "682016"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [76.2673, 9.9312]
+      }
+    },
+    "contact": {
+      "phone": "9090909090"
+    },
+    "priceForTwo": 750,
+    "license": {
+      "fssai": "88990011223344"
+    },
+    "offers": []
+  },
+  {
+    "name": "Surat Street Feast",
+    "slug": "surat-street-feast",
+    "owner": "66b9a0a1c1a1a1a1a1a1a109",
+    "description": "Famous Surat street food and snacks.",
+    "cuisines": ["Street Food", "Gujarati"],
+    "location": {
+      "address": {
+        "street": "Adajan",
+        "city": "Surat",
+        "state": "Gujarat",
+        "pincode": "395009"
+      },
+      "coordinates": {
+        "type": "Point",
+        "coordinates": [72.8311, 21.1702]
+      }
+    },
+    "contact": {
+      "phone": "9112233445"
+    },
+    "priceForTwo": 300,
+    "isPureVeg": true,
+    "license": {
+      "fssai": "99001122334455"
+    },
+    "offers": []
+  }
+]

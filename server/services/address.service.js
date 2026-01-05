@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import Address from "../models/address.model.js";
-import User from "../models/user.model.js";
+import Restaurant from "../models/restaurant.model.js";
 
 export const createAndAddAddress = async ({
   user,
@@ -76,4 +76,27 @@ export const unsetAllDefaultAddresses = async (userId) => {
     { user: userId, isDefault: true },
     { $set: { isDefault: false } }
   );
+};
+
+export const findDefaultAddress = async (userId) => {
+  return await Address.findOne({
+    user: userId,
+    isDefault: true,
+  });
+};
+
+export const findNearestRestaurants = async (coordinates) => {
+  return await Restaurant.find({
+    "location.coordinates": {
+      $near: {
+        $geometry: {
+          type: "Point",
+          coordinates,
+        },
+        $maxDistance: 5000,
+      },
+    },
+    isActive: true,
+    isAcceptingOrders: true,
+  }).limit(20);
 };

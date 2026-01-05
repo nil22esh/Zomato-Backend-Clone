@@ -30,7 +30,7 @@ import {
 
 export const registerUser = async (req, res, next) => {
   try {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, ...data } = req.body;
     registerValidations({ name, email, password, phone });
 
     const userExists = await findUserByEmailOrPhone({ email, phone });
@@ -38,7 +38,7 @@ export const registerUser = async (req, res, next) => {
       throw new BadRequestError("User already exists with this email or phone");
     }
 
-    const user = await createUser({ name, email, password, phone });
+    const user = await createUser({ name, email, password, phone, ...data });
     if (!user) {
       throw new BadRequestError("User not created, something went wrong");
     }

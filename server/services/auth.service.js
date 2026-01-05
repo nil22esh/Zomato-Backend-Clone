@@ -5,8 +5,8 @@ export const findUserByEmailOrPhone = async ({ email, phone }) => {
   return user;
 };
 
-export const createUser = async ({ name, email, password, phone }) => {
-  const newUser = await User.create({ name, email, password, phone });
+export const createUser = async ({ name, email, password, phone, ...data }) => {
+  const newUser = await User.create({ name, email, password, phone, ...data });
   return newUser;
 };
 

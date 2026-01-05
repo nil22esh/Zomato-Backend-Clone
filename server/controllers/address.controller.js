@@ -4,6 +4,8 @@ import {
   createAndAddAddress,
   deleteAddressById,
   findAddressById,
+  findDefaultAddress,
+  findNearestRestaurants,
   getUserAddresses,
   unsetAllDefaultAddresses,
 } from "../services/address.service.js";
@@ -361,6 +363,47 @@ export const validateAddress = async (req, res, next) => {
 
 export const getNearbyRestaurants = async (req, res, next) => {
   try {
+    if (!req.user) {
+      throw new UnauthorizedError("Unauthorized");
+    }
+
+    // get userId
+    const userId = req.user._id;
+    const { addressId } = req.params;
+
+    if (!addressId || !mongoose.Types.ObjectId.isValid(addressId)) {
+      throw new BadRequestError("Invalid address ID");
+    }
+
+    // fetch address
+    const address = await findAddressById(addressId);
+    if (!address) {
+      throw new NotFoundError("Address not found");
+    }
+
+    // ownership check
+    if (address.user.toString() !== userId.toString()) {
+      throw new ForbiddenError("Access denied");
+    }
+
+    // find nearby restaurants
+    const restaurants = await findNearestRestaurants(
+      address.location.coordinates
+    );
+
+    if (!restaurants || restaurants.length === 0) {
+      throw new NotFoundError("No nearby restaurants found");
+    }
+
+    return successResponse(res, {
+      statusCode: 200,
+      message: "Nearby restaurants fetched successfully",
+      data: restaurants,
+      meta: {
+        total: restaurants.length,
+        radius: "5km",
+      },
+    });
   } catch (error) {
     logger.error(error);
     next(error);
