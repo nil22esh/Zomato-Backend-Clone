@@ -1,0 +1,61 @@
+[
+  {
+    "_id": "70a1f001a1c1d61d752e1001",
+    "restaurant": "695b31be1321d61d752e0941",
+    "name": "Starters",
+    "description": "Delicious appetizers to begin your meal",
+    "displayOrder": 1,
+    "isActive": true,
+    "items": ["70b1a111a1c1d61d752e2001", "70b1a111a1c1d61d752e2002"],
+    "createdAt": "2025-01-01T08:30:00.000Z",
+    "updatedAt": "2025-01-01T08:30:00.000Z"
+  },
+  {
+    "_id": "70a1f001a1c1d61d752e1002",
+    "restaurant": "695b31be1321d61d752e0941",
+    "name": "Main Course",
+    "description": "Hearty and fulfilling main dishes",
+    "displayOrder": 2,
+    "isActive": true,
+    "items": [
+      "70b1a111a1c1d61d752e2101",
+      "70b1a111a1c1d61d752e2102",
+      "70b1a111a1c1d61d752e2103"
+    ],
+    "createdAt": "2025-01-01T08:32:00.000Z",
+    "updatedAt": "2025-01-01T08:32:00.000Z"
+  },
+  {
+    "_id": "70a1f001a1c1d61d752e1003",
+    "restaurant": "695b31be1321d61d752e0941",
+    "name": "Biryani & Rice",
+    "description": "Aromatic biryanis and rice-based specials",
+    "displayOrder": 3,
+    "isActive": true,
+    "items": ["70b1a111a1c1d61d752e2201", "70b1a111a1c1d61d752e2202"],
+    "createdAt": "2025-01-01T08:35:00.000Z",
+    "updatedAt": "2025-01-01T08:35:00.000Z"
+  },
+  {
+    "_id": "70a1f001a1c1d61d752e1004",
+    "restaurant": "695b31be1321d61d752e0941",
+    "name": "Beverages",
+    "description": "Refreshing drinks and coolers",
+    "displayOrder": 4,
+    "isActive": true,
+    "items": ["70b1a111a1c1d61d752e2301", "70b1a111a1c1d61d752e2302"],
+    "createdAt": "2025-01-01T08:37:00.000Z",
+    "updatedAt": "2025-01-01T08:37:00.000Z"
+  },
+  {
+    "_id": "70a1f001a1c1d61d752e1005",
+    "restaurant": "695b31be1321d61d752e0941",
+    "name": "Desserts",
+    "description": "Sweet treats to end your meal",
+    "displayOrder": 5,
+    "isActive": false,
+    "items": ["70b1a111a1c1d61d752e2401"],
+    "createdAt": "2025-01-01T08:40:00.000Z",
+    "updatedAt": "2025-01-01T08:40:00.000Z"
+  }
+]
