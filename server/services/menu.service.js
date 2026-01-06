@@ -35,3 +35,17 @@ export const getdeletedCategory = async (restaurantId, categoryId) => {
     restaurant: restaurantId,
   });
 };
+
+export const findRestaurantsMenuById = (restaurantId, menuId) => {
+  return Menu.findOne({
+    _id: menuId,
+    restaurant: restaurantId,
+  });
+};
+
+export const getRestaurantCategoryById = async (restaurantId, categoryId) => {
+  return Menu.findOne({
+    _id: categoryId,
+    restaurant: restaurantId,
+  });
+};

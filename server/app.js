@@ -8,6 +8,7 @@ import userRouter from "./routes/user.routes.js";
 import addressRouter from "./routes/address.routes.js";
 import restaurantRouter from "./routes/restaurant.routes.js";
 import menuRouter from "./routes/menu.routes.js";
+import menuItemRouter from "./routes/menuItem.routes.js";
 
 // load environment variables from env file
 dotenv.config();
@@ -28,6 +29,7 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/address", addressRouter);
 app.use("/api/v1/restaurant", restaurantRouter);
 app.use("/api/v1/menu", menuRouter);
+app.use("/api/v1/menuItem", menuItemRouter);
 
 // error handler
 app.use(errorHandler);

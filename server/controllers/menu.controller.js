@@ -5,6 +5,7 @@ import {
   checkCategoryExists,
   createNewCategory,
   getdeletedCategory,
+  getRestaurantCategoryById,
   getUpdatedCategory,
 } from "../services/menu.service.js";
 import { findRestaurantById } from "../services/restaurant.service.js";
@@ -37,6 +38,30 @@ export const createCategory = async (req, res, next) => {
     return res.status(201).json({
       success: true,
       message: "Category created successfully",
+      data: category,
+    });
+  } catch (error) {
+    logger.error(error);
+    next(error);
+  }
+};
+
+export const getCategoryById = async (req, res, next) => {
+  try {
+    if (!req.user) {
+      throw new UnauthorizedError("Unauthorized");
+    }
+    const { restaurantId, categoryId } = req.params;
+    if (!restaurantId || !mongoose.Types.ObjectId.isValid(restaurantId)) {
+      throw new BadRequestError("Invalid restaurant ID");
+    }
+    if (!categoryId || !mongoose.Types.ObjectId.isValid(categoryId)) {
+      throw new BadRequestError("Invalid category ID");
+    }
+    const category = await getRestaurantCategoryById(restaurantId, categoryId);
+    return res.status(200).json({
+      success: true,
+      message: "Category fetched successfully",
       data: category,
     });
   } catch (error) {
@@ -121,54 +146,6 @@ export const deleteCategory = async (req, res, next) => {
       message: "Category deleted successfully",
       data: deletedCategory,
     });
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const createItem = async (req, res, next) => {
-  try {
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const getItemById = async (req, res, next) => {
-  try {
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const updateItem = async (req, res, next) => {
-  try {
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const deleteItem = async (req, res, next) => {
-  try {
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const toggleAvailability = async (req, res, next) => {
-  try {
-  } catch (error) {
-    logger.error(error);
-    next(error);
-  }
-};
-
-export const updatePrice = async (req, res, next) => {
-  try {
   } catch (error) {
     logger.error(error);
     next(error);
